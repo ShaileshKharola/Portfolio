@@ -96,7 +96,7 @@ body {
 
 /* Hero Section */
 #hero {
-    background-image: url('/src/assets/background.jpg');
+    background-image: url('../assets/background.jpg');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -204,7 +204,7 @@ body {
 
 /* Projects Section */
 #projects {
-    padding: 6rem 0;
+    padding: 7rem 0;
     background-color: rgb(33, 14, 46);
 }
 
@@ -235,7 +235,7 @@ body {
 
 /* Contact Section */
 #contact {
-    padding: 6rem 0;
+    padding: 7rem 0;
     background-color: rgb(33, 14, 46);;
     text-align: center;
 }
