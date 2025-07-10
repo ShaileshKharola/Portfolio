@@ -35,34 +35,46 @@
   </header>
   </section>
     <!--Hero Section-->
+<!-- HERO SECTION -->
 <section id="hero" class="jumbotron">
   <div class="hero-overlay"></div>
- <div class="hero-content">
-  <div class="row about-wrapper">
-    <div class="hero-text jumbotron-hero-hidden">
-      <h1>Welcome to My Portfolio</h1>
 
-      <h2>My name is</h2>
+  <div class="hero-content">
+    <div class="row about-wrapper">
+      <div class="hero-text jumbotron-hero-hidden">
+        <h1>Welcome to My Portfolio</h1>
+        <h2>My name is</h2>
 
-      <div class="text-color-main" style="font-size:x-large; padding: 5px;">
-        <div class="typed-text">
-        <span id="typed">
-       </span>
+        <div class="text-color-main" style="font-size: x-large; padding: 5px;">
+          <div class="typed-text">
+            <span id="typed"></span>
+          </div>
+        </div>
+
+        <div style="font-size: 1.23rem; color: #b1b1de;">
+          I'm a final-year B.Tech at DIT University.
+        </div>
       </div>
-        
-        
-      </div>
-
-      <div style="font-size: 1.23rem; color: #b1b1de;">
-  I'm a final-year B.Tech at DIT University.
-</div>
     </div>
   </div>
-    <p class="hero-cta load-hidden">
-
-    </p>
-  </div>
 </section>
+
+<!-- TYPING SCRIPT -->
+<script>
+  const text = "Shailesh Kharola";
+  let i = 0;
+
+  function typeEffect() {
+    if (i < text.length) {
+      document.getElementById("typed").textContent += text.charAt(i);
+      i++;
+      setTimeout(typeEffect, 100);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", typeEffect);
+</script>
+
 <!--Description Section-->
      <section id="about">
       <div class="container">
@@ -341,6 +353,6 @@
         <hr />
       </div>
     </footer>
-  <script src="../js/main.js" type="module"></script>
+  <script src="Portfolio/src/js/main.js" type="module"></script>
 </body>
 </html>

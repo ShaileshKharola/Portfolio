@@ -97,31 +97,73 @@ body {
 }
 
 /* Hero Section */
+/* Hero Section */
 #hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 70px;
-    color: rgb(200, 99, 234);
-    overflow: hidden;
-    z-index: 1;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 70px;
+  overflow: hidden;
+  z-index: 1;
+  color: rgb(200, 99, 234);
 }
 
+/* Blurred background image */
 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../assets/background.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: blur(6px) brightness(0.6);
-    transform: scale(1.05); 
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/background.jpg'); /* Update the path if needed */
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px) brightness(0.6);
+  transform: scale(1.05); /* Slight zoom to avoid edge blur */
+  z-index: -1;
 }
+
+/* Hero content layout */
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+/* Text styles */
+.hero-text {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  color: #b1b1de;
+}
+
+/* Heading styles */
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.hero-text h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #b1b1de;
+}
+
+/* Main typing text */
+.text-color-main {
+  color: #a376d7;
+  font-weight: bold;
+  font-size: 1.6rem;
+  font-family: monospace;
+  white-space: nowrap;
+}
+
+/* Typing effect styling */
 .typed-text {
   font-size: 2rem;
   color: #9c6eff;
@@ -129,47 +171,16 @@ body {
   white-space: nowrap;
 }
 
+/* Blinking cursor */
 #typed::after {
   content: '|';
-  animation: blink-caret 0.7s step-end infinite;
+  animation: blink 0.7s step-end infinite;
 }
 
-@keyframes blink-caret {
-  from, to { opacity: 0 }
-  50% { opacity: 1 }
-}
-
-
-.hero-content.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-.hero-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.hero-text {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.3;
-    text-align: left;
-    color: #b1b1de; /* Light gray for readability */
-}
-
-.hero-text h2 {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
-    color: #b1b1de; /* Purple accent */
-}
-
-.text-color-main {
-    color: #a376d7;
-    font-weight: bold;
-    font-size: 1.6rem;
+/* Cursor blinking animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 
